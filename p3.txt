@@ -1,0 +1,56 @@
+✅ What is Supabase Auth?
+Supabase Auth is an authentication and authorization system built on top of PostgreSQL, providing user management and secure access with methods like:
+
+Email & password login
+
+Social logins (Google, GitHub, etc.)
+
+Magic links (passwordless)
+
+Phone OTP login
+
+Server-side and client-side auth management
+
+
+
+About authentication and authorization#
+Authentication and authorization are the core responsibilities of any Auth system.
+
+Authentication means checking that a user is who they say they are.
+Authorization means checking what resources a user is allowed to access.
+Supabase Auth uses JSON Web Tokens (JWTs) for authentication. For a complete reference of all JWT fields, see the JWT Fields Reference. Auth integrates with Supabase's database features, making it easy to use Row Level Security (RLS) for authorization.
+
+
+
+
+
+today
+
+auth 
+Supabase Auth – Concepts Learned
+Supabase Auth is and how it manages authentication.
+
+
+
+Learned how to:
+
+Register users with email and password.
+
+Log in users using email/password, OTP, magic links, and Google OAuth.
+
+Get the current logged-in user and handle sign out.
+
+Use auth state listeners to detect login/logout in real-time.
+
+Manage sessions and refresh tokens securely.
+
+Explored how JWT tokens work and how to pass them in API headers.
+
+Learned about RBAC (Role-Based Access Control) using Supabase policies.
+
+Understood Supabase's default auth tables like auth.users, auth.sessions, and auth.identities.
+
+Learned how to customize email templates for password reset and login flows.
+
+Explored how Supabase Auth works in Next.js and supports server-side auth.
+

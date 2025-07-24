@@ -1,0 +1,17 @@
+🧠 What is Authentication?
+Authentication means verifying who the user is.
+
+Supabase provides built-in authentication with:
+
+Email/password login
+
+Social login (Google, GitHub, etc.)
+
+Magic links
+
+OTP login (phone/email)
+
+Supabase handles the backend auth for you — no need to build your own login system.
+
+
+

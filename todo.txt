@@ -1,0 +1,76 @@
+✅ Step 5: Get Current Logged-In User
+ts
+Copy
+Edit
+const { data: { user } } = await supabase.auth.getUser();
+or to get the session:
+
+ts
+Copy
+Edit
+const { data: { session } } = await supabase.auth.getSession();
+Helps protect pages (e.g., dashboard) for logged-in users only.
+
+✅ Step 6: Logout User
+ts
+Copy
+Edit
+await supabase.auth.signOut();
+Destroys the session and logs out the user.
+
+✅ Step 7: Auth State Change Listener (Optional but Powerful)
+ts
+Copy
+Edit
+supabase.auth.onAuthStateChange((event, session) => {
+  console.log("Auth Event:", event);
+  console.log("Session:", session);
+});
+Useful to track login/logout events in real-time.
+
+✅ Step 8: Protect Pages (React/Next.js)
+ts
+Copy
+Edit
+useEffect(() => {
+  const checkAuth = async () => {
+    const { data } = await supabase.auth.getSession();
+    if (!data.session) {
+      router.push('/login');
+    }
+  };
+  checkAuth();
+}, []);
+✅ Step 9: Show User Info in UI
+tsx
+Copy
+Edit
+const user = (await supabase.auth.getUser()).data.user;
+return <div>Welcome, {user?.email}</div>;
+🔄 Optional Features
+🔁 Password Reset
+ts
+Copy
+Edit
+await supabase.auth.resetPasswordForEmail('test@example.com');
+🔗 Magic Link Login
+ts
+Copy
+Edit
+await supabase.auth.signInWithOtp({ email: 'test@example.com' });
+🔑 Social OAuth (Google, GitHub)
+ts
+Copy
+Edit
+await supabase.auth.signInWithOAuth({
+  provider: 'google',
+});
+You must enable and configure this in Supabase > Auth > Settings > External OAuth Providers.
+
+
+SUPABASE projectID : xecndhrhvlzzgrlpdirp
+https://xecndhrhvlzzgrlpdirp.supabase.co/auth/v1/callback
+
+client id of github : Ov23liaNzsFbBw20rfXZ
+client secrete of github : f3664b20abec60614f0cf1b26e4cc04626c77f34
+

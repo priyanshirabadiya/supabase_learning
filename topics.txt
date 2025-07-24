@@ -1,0 +1,256 @@
+📘 Supabase Learning Roadmap (Topic-Wise)
+✅ 1. Introduction to Supabase
+What is Supabase?
+Supabase vs Firebase
+Why use Supabase?
+Supabase architecture (PostgreSQL + APIs + Auth + Realtime)
+
+🏗️ 2. Setting Up Supabase Project
+Create an account at supabase.com
+Create your first project
+Supabase Dashboard overview
+Understanding project URL and anon key
+
+🔍 4. Supabase Client Setup in App
+Installing @supabase/supabase-js
+Creating Supabase client
+Environment setup (.env.local)
+Connecting to Supabase in React/Next.js
+
+🗃️ 3. Database in Supabase
+PostgreSQL basics
+Creating tables in Supabase
+Table columns, data types, and relationships
+Row-Level Security (RLS)
+Writing SQL in Supabase
+
+📡 5. Working with Data (CRUD Operations)
+📥 Read data: select()
+➕ Insert data: insert()
+✏️ Update data: update()
+❌ Delete data: delete()
+Filtering: eq(), gt(), lt(), like(), etc.
+
+
+🔐 6. Authentication
+Enable email/password, Google, GitHub logins
+Sign up users: signUp()
+Login users: signInWithPassword()
+Logout users: signOut()
+Session management: onAuthStateChange(), getSession()
+Protecting routes based on auth
+
+
+📦 7. Supabase Storage (File Uploads)
+Creating a storage bucket
+Uploading files
+Fetching image URLs
+Listing & deleting files
+File permission settings
+
+🔁 8. Realtime Subscriptions
+Enable Realtime for a table
+Subscribing to inserts, updates, deletes
+Use case: live chat, notifications, dashboards
+
+🧠 9. Row Level Security (RLS) & Policies
+What is RLS?
+How to write access policies
+Common use cases (user-specific data, admin access)
+Testing security policies
+
+🔧 10. Supabase Edge Functions
+What are Edge Functions?
+Creating and deploying a function
+Calling functions from your app
+Example: send email on user signup
+
+📊 11. Supabase Admin UI & SQL Editor
+Using Table Editor (GUI)
+Using SQL Editor to write custom queries
+Understanding Supabase-generated APIs
+Viewing API docs per table
+
+
+🧪 12. Advanced Topics
+Supabase with TypeScript
+Supabase with React Query
+Supabase with Zustand or Redux
+Database relationships & joins
+Trigger-based automation
+Migrations (Supabase CLI)
+
+🧱 13. Real Projects Ideas to Practice
+Todo App
+Notes App with login
+Chat App using Realtime
+File Upload System
+Admin Dashboard with Supabase
+
+
+🟢 Beginner: Getting Started
+✅ What is Supabase?
+
+✅ Setting up a Supabase Project
+
+✅ Supabase Dashboard Overview
+
+✅ Connecting Supabase to Frontend (API keys, URLs)
+
+🔐 Authentication
+✅ Email/Password Auth
+
+✅ OAuth (GitHub, Google login)
+
+✅ Session Management
+
+✅ Protected Routes
+
+✅ Auth Guards in Frontend (like Next.js middleware or client-side checks)
+
+🗃️ Database (PostgreSQL via Supabase)
+✅ Creating Tables & Columns
+
+✅ Table Relationships (Foreign Keys)
+
+✅ Supabase Row-Level Security (RLS)
+
+✅ Policies for Read/Write Access
+
+✅ Data Validation Rules
+
+📦 CRUD Operations (Using Supabase Client)
+✅ Insert Data
+
+✅ Read Data (with filters, pagination)
+
+✅ Update Data
+
+✅ Delete Data
+
+✅ Realtime Subscriptions (listen to changes in DB)
+
+⚙️ Storage
+✅ Upload Files (e.g., images, PDFs)
+
+✅ Managing Buckets
+
+✅ Generating Public/Private URLs
+
+✅ Role-based Access to Files
+
+🧠 Advanced Database Stuff
+✅ Views, Triggers, and Functions
+
+✅ Stored Procedures
+
+✅ Using SQL Editor for complex queries
+
+✅ Supabase Edge Functions (like serverless functions)
+
+💡 Extras / Power Features
+✅ Supabase CLI
+✅ Local Development with Supabase CLI
+✅ Supabase + Prisma (if combining with Prisma ORM)
+✅ Supabase + GraphQL (experimental)
+🧪 Testing & Monitoring
+✅ Logs & Monitoring
+✅ Usage & Limits
+✅ Performance Tuning (Indexes, Query Plans)
+
+🚀 Integrations & Use Cases
+✅ Supabase + Next.js
+✅ Supabase + React
+✅ Supabase in Mobile Apps (React Native)
+✅ Third-party Integrations (Zapier, Stripe, etc.)
+
+
+------------------------------------
+
+🔐 1. Supabase Auth
+User sign-up, sign-in, and sign-out
+
+Magic link & OAuth providers (e.g., GitHub, Google)
+
+Session handling and persistence (supabase.auth.getSession())
+
+Role-based access (admin, manager, guest, etc.)
+
+RLS (Row-Level Security) rules
+
+🧱 2. Supabase Database (PostgreSQL)
+Tables, columns, and data types
+
+Primary keys, foreign keys, and relations
+
+Filtering, sorting, and pagination (.select(), .eq(), .like(), .range() etc.)
+
+Joins with select('*, related_table(*)')
+
+Database constraints and indexes
+
+📄 3. Supabase Queries with Supabase JS Client
+select(), insert(), update(), delete()
+
+Handling real-time data with .on()
+
+Using .rpc() for Postgres functions
+
+Error handling and debugging queries
+
+📡 4. Real-time Subscriptions
+Listening to changes in tables (insert/update/delete)
+
+Using .on('INSERT'), .on('UPDATE'), etc.
+
+Building real-time dashboards or chat features
+
+☁️ 5. Supabase Storage
+Uploading files (images, documents, etc.)
+Downloading and serving public/private files
+Managing buckets and access levels
+Generating signed URLs for protected files
+
+
+🔐 6. Row-Level Security (RLS)
+Enabling RLS for secure data access
+Writing policies (using SQL expressions)
+Common examples:
+Users can only access their own data
+Admins have full access
+Role-based conditions
+
+🛠️ 7. Supabase Functions (Edge Functions)
+Writing server-side logic using Supabase Edge Functions (Deno-based)
+
+Using for things like webhooks, scheduled tasks, secure APIs
+
+📈 8. Supabase Dashboard & Project Settings
+Project settings: API keys, Auth providers
+
+Logs & monitoring
+
+Usage limits and pricing
+
+🧪 9. Supabase with Next.js
+Setting up client and server-side Supabase in Next.js
+
+Using Supabase Auth in Next.js (middleware for protected routes)
+
+SSR/SSG support with Supabase
+
+API routes using Supabase
+
+Server Actions + Supabase (React 19+)
+
+🔄 10. Backup & Migration
+Exporting data and schema
+
+Using pg_dump or Supabase Studio
+
+Migration strategies for production apps
+
+
+
+
+

@@ -1,0 +1,109 @@
+
+
+✅Login with Google & GitHub
+Created OAuth apps
+Set callback URLs
+Pasted Client ID and Secret into Supabase
+Enabled providers
+
+✅Protect Routes & Fetch Logged-In User
+Used supabase.auth.getSession()
+Redirected users if not logged in
+Showed logged-in user's email
+
+✅ Logout User
+Used supabase.auth.signOut() to logout and destroy session
+
+✅ Session Handling & Persistence
+Session stored in localStorage
+Accessed current session using getSession()
+Understood refresh and access token concept
+Session survives refresh until expired
+
+
+
+✅Login with Google & GitHub
+
+✅Protect Routes & Fetch Logged-In User
+Used supabase.auth.getSession()
+Redirected users if not logged in
+Showed logged-in user's email
+
+✅ Logout User : supabase.auth.signOut() to logout and destroy session
+
+✅Session Handling & Persistence
+Session stored in localStorage
+Accessed current session using getSession()
+
+
+----------- 23 - 7 - 25
+
+sheet
+Database Structure – Supabase auto-creates PostgreSQL DB; you manage only tables.
+
+Table Access – Tables are inside the default DB; no need to create DB manually.
+
+View DB Info – DB name is not visible or editable.
+
+.single() Method – Returns one object instead of an array.
+
+Policies (RLS) – Created a policy using USING (true) and WITH CHECK (true) to allow public access.
+
+.eq(), .neq(), .gt(), .lt(), .gte(), .lte(), .like(), .ilike(), .is(), .in(), .not(), .or(), .filter(), .match() – All filter methods used in Supabase queries.
+
+Dynamic Filters – Applied filters conditionally in Next.js based on user input.
+
+Supabase SQL Editor – Ran SQL queries like SELECT * FROM users WHERE age > 25.
+
+Filter File Setup – Created reusable logic for filtering with multiple conditions.
+
+Supabase Client – Used createClient() in lib/supabaseClient.ts with URL and anon key.
+
+
+react-team
+
+Database Structure – Supabase auto-creates a PostgreSQL DB; you just manage tables, not the DB name.
+Filtering Methods – Used filters - .eq(), .neq(), .gt(), .lt(), .gte(), .lte(), .like(), .ilike(), .is(), .in(), .not(), .or(), .filter(), .match()
+Dynamic Filters – Applied filters conditionally based on form input or state in Next.js.
+Supabase SQL Editor – Used raw SQL like SELECT * FROM users WHERE age > 25 to run queries.
+Filter File Setup – Created reusable filtering logic in a utility file.
+Supabase Client – Used createClient() with project URL and anon key in a separate lib file.
+
+
+
+
+----------- 24 - 7 - 25
+
+Understood how Supabase Storage works and the role of storage.objects table.
+
+Created a bucket (avatars2) from Supabase Dashboard with visibility options.
+
+Implemented uploadFile(file) in Next.js using Supabase client.
+
+Fixed RLS violation error by writing proper SQL policy for authenticated users.
+
+Learned how to fetch URLs using getPublicUrl() and getSignedUrl().
+
+Created listFiles() to list and deleteFile() to remove files in a folder.
+
+Wrote INSERT, SELECT, and DELETE RLS policies using SQL.
+
+Found that storage.objects can’t be edited via GUI, only through SQL.
+
+Understood RLS error: "must be owner of table" when enabling from SQL.
+
+Verified file uploads, retrievals, and deletions are fully working.
+
+Learned how to make file access public or private with signed URLs.
+
+Practiced full CRUD on storage using Supabase JS client in a reusable utility file.
+
+
+react-ream
+
+Supabase Storage Overview – Learned how storage and storage.objects table work.
+Creating a Storage Bucket – Created a new bucket and understood public/private access.
+Uploading Files – Implemented uploadFile() in Next.js and fixed RLS insert issues.
+Fetching Image URLs – Used getPublicUrl() and getSignedUrl() for public/private files.
+Listing & Deleting Files – Listed files in a folder and deleted them using Supabase client.
+File Permission Settings (RLS Policies) – Wrote SQL policies for INSERT, SELECT, DELETE and understood RLS limitations.

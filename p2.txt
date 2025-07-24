@@ -1,0 +1,13 @@
+Supabase Integrations 
+
+ChatGPT said:
+In Supabase, Integrations connect your Supabase project to third-party tools, services, or platforms to expand your app's capabilities without building everything from scratch.
+🔌 What Supabase Integrations Do:
+They allow you to:
+Connect databases, sync data, or schedule tasks
+Add user authentication
+Run background jobs
+Use analytics or external APIs
+Extend Supabase with custom wrappers or services
+
+
