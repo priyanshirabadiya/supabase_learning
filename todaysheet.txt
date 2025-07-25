@@ -126,12 +126,12 @@ Learned that storage access + SQL policy logic must work together for successful
 
 react-team
 
-📂 Supabase Storage uses folder-like path strings (e.g., private/userId/file.png) for access control.
-🔐 RLS policy was enforced using storage.foldername(name)[1] and [2] to restrict uploads per user.
-🚫 Uploads failed due to mismatched path (e.g., uploading to public/ instead of private/userId/).
-✅ Fixed the issue by dynamically building file path with const filePath = private/${user.id}/${file.name}.
-🐞 Used detailed console.log() to debug file paths and verified them inside Supabase UI folders.
-
+Supabase Storage uses folder-like path strings (e.g., private/userId/file.png) for access control.
+RLS policy was enforced using storage.foldername(name)[1] and [2] to restrict uploads per user.
+Uploads failed due to mismatched path (e.g., uploading to public/ instead of private/userId/).
+Fixed the issue by dynamically building file path with const filePath = private/${user.id}/${file.name}.
+Used detailed console.log() to debug file paths and verified them inside Supabase UI folders.
+overview of Realtime Subscriptions
 
 
 
