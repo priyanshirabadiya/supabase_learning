@@ -109,6 +109,29 @@ Listing & Deleting Files – Listed files in a folder and deleted them using Sup
 File Permission Settings (RLS Policies) – Wrote SQL policies for INSERT, SELECT, DELETE and understood RLS limitations.
 
 
+----------------------------------------- 25 - 7 - 25
+
+timesheet 
+
+Supabase Storage organizes files using a path-like structure, like folders (bucket/folder/file.png).
+Paths are just strings but can behave like directories (e.g., private/userId/file.png).
+You enabled RLS (Row-Level Security) on the avatar bucket to restrict file uploads.
+You wrote a policy checking storage.foldername(name)[1] = 'private' and [2] = auth.uid() to allow user-specific uploads.
+Uploads were failing with: "Upload failed: new row violates row-level security policy" due to incorrect paths.
+You fixed it by dynamically building paths like private/${user.id}/${file.name} inside the upload function.
+Used upsert: true to overwrite files with the same name under a user’s folder.
+Debugged file paths using console.log() and visually confirmed the file structure inside Supabase UI.
+Learned that storage access + SQL policy logic must work together for successful uploads.
+
+
+react-team
+
+📂 Supabase Storage uses folder-like path strings (e.g., private/userId/file.png) for access control.
+🔐 RLS policy was enforced using storage.foldername(name)[1] and [2] to restrict uploads per user.
+🚫 Uploads failed due to mismatched path (e.g., uploading to public/ instead of private/userId/).
+✅ Fixed the issue by dynamically building file path with const filePath = private/${user.id}/${file.name}.
+🐞 Used detailed console.log() to debug file paths and verified them inside Supabase UI folders.
+
 
 
 
