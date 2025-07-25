@@ -107,3 +107,8 @@ Uploading Files – Implemented uploadFile() in Next.js and fixed RLS insert iss
 Fetching Image URLs – Used getPublicUrl() and getSignedUrl() for public/private files.
 Listing & Deleting Files – Listed files in a folder and deleted them using Supabase client.
 File Permission Settings (RLS Policies) – Wrote SQL policies for INSERT, SELECT, DELETE and understood RLS limitations.
+
+
+
+
+
